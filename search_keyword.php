@@ -38,7 +38,7 @@
 include "db_connection.php";
 $keywordfromform = $_GET["keyword"];
 
-echo "<h2>Nájdené šetky ftipy so slovom $keywordfromform v hádanke:</h2>";
+echo "<h2>Nájdené všetky vtipy so slovom $keywordfromform v hádanke:</h2>";
 
 $sql = "SELECT JokeID, Joke_question, Joke_answer FROM jokes_table WHERE Joke_question LIKE '%" . $keywordfromform . "%'";
 $result = $mysqli->query($sql);
